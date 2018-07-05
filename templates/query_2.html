@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="input_box">
+    <h3 class="text-center"> Press the button to Process the query </h3>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label> Height 1 </label><input type="text" name="height1" placeholder="add Height from">
+        <label> Height 2 </label><input type="text" name="height2" placeholder="add Height to">
+        <label> Zip Code </label><input type="text" name="zip" placeholder="add Zip Code">
+        <label> Mappers </label>
+          <select name="Mappers">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+
+          <label> Reducers </label>
+          <select name="Reducers">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+          <br>
+        <input type="submit" value="process" class="btn-info center-block">
+    </form>
+    <h2> Time to process : {{ timeinfo }} Seconds</h2>
+</div>
+<div>
+{% if dataInfo %}
+    {{ dataInfo|safe }}
+{% endif %}
+</div>
+{% endblock %}

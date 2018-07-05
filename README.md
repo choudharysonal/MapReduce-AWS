@@ -1,0 +1,1 @@
+Using Hadoop, and user given number of mappers and reducers, executed result of queries on dataset.
